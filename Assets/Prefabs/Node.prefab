@@ -424,7 +424,7 @@ GameObject:
   - component: {fileID: 2966858804390288079}
   - component: {fileID: 6792726730820405936}
   - component: {fileID: 3174271069542144980}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -471,8 +471,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.42745098}
+  m_Material: {fileID: 2100000, guid: 7e02a1993153a1e4191341b4539385dc, type: 2}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.654902}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -502,7 +502,7 @@ GameObject:
   - component: {fileID: 5110654317431315164}
   - component: {fileID: 8603273265465622471}
   - component: {fileID: 1147556291539603410}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -549,7 +549,7 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: 94921931
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!114 &5110654317431315164
@@ -616,7 +616,7 @@ GameObject:
   - component: {fileID: 5756455735801133258}
   - component: {fileID: 9205017562165163506}
   - component: {fileID: 1147709784390691624}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Description
   m_TagString: Untagged
   m_Icon: {fileID: 0}

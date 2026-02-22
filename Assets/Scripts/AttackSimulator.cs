@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class AttackSimulator : MonoBehaviour
+public class AttackSimulator : MonoBehaviour, IInteractable
 {
     [SerializeField] RenderNodeConnection connectionRenderer;
 
@@ -11,11 +11,11 @@ public class AttackSimulator : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            Attack();
+            Interact();
         }
     }
 
-    public void Attack()
+    public void Interact()
     {
         if (connectionRenderer == null || 
             targetConnectionIndex > connectionRenderer.connections.Count) return;

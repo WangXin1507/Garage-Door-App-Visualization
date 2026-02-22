@@ -1,15 +1,16 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class CutConnection : MonoBehaviour
 {
     [SerializeField] RenderNodeConnection connectionRenderer;
-
-    [Tooltip("How close the controller needs to be to sever the line (in meters)")]
-    public float sliceThreshold = 0.1f;
+    [SerializeField] float sliceThreshold = 0.1f;
+    [SerializeField] InputActionReference inputAction;
 
     void Update()
     {
         if (connectionRenderer == null || connectionRenderer.connections == null) return;
+        if (inputAction == null || !inputAction.action.IsPressed()) return;
 
         Vector3 c = transform.position;
 

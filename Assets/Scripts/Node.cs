@@ -11,29 +11,29 @@ public class Node : MonoBehaviour
     [SerializeField] Vector3 targetScale;
     [SerializeField] float enlargeSpeed;
     Vector3 origScale;
-    bool hovered;
+    protected bool hovered;
 
     void Awake()
     {
         origScale = transform.localScale;
-        descrp.enabled = false;
+        if (descrp) descrp.enabled = false;
 
         XRSimpleInteractable xrInteract = GetComponent<XRSimpleInteractable>();
         xrInteract.hoverEntered.AddListener(OnHoverEnter);
         xrInteract.hoverExited.AddListener(OnHoverExit);
     }
 
-    void Update()
+    protected virtual void Update()
     {
         if (hovered)
         {
             transform.localScale = Vector3.Lerp(transform.localScale, targetScale, Time.deltaTime * enlargeSpeed);
-            descrp.enabled = true;
+            if (descrp) descrp.enabled = true;
         }
         else
         {
             transform.localScale = Vector3.Lerp(transform.localScale, origScale, Time.deltaTime * enlargeSpeed);
-            descrp.enabled = false;
+            if (descrp) descrp.enabled = false;
         }
         //float dist = Vector3.Distance(transform.position, Camera.main.transform.position);
         //descrpRect.localScale = origScale * dist / 20f;
