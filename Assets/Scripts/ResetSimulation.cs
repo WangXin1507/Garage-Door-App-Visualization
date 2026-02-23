@@ -7,5 +7,6 @@ public class ResetSimulation : IInteractable
     public override void Interact()
     {
         connectionRenderer.ResetConnections();
+        AttackSimulator.attacked = false;
     }
 }

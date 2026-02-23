@@ -7,6 +7,8 @@ public class AttackSimulator : IInteractable
     [SerializeField] int targetConnectionIndex;
     [SerializeField] Material attackedMat;
 
+    public static bool attacked;
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Return))
@@ -24,5 +26,7 @@ public class AttackSimulator : IInteractable
 
         targetLine.material = attackedMat;
         targetLine.startWidth = targetLine.endWidth = 0.02f;
+
+        attacked = true;
     }
 }

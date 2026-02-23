@@ -3,10 +3,12 @@ using UnityEngine;
 
 public class UsageSimulator : IInteractable
 {
-    public RenderNodeConnection connectionRenderer;
+    [SerializeField] RenderNodeConnection connectionRenderer;
+    [SerializeField] DoorController doorController;
 
     public override void Interact()
     {
+        if (AttackSimulator.attacked) return;
         StartCoroutine(SimulateSignal());
     }
 
@@ -25,5 +27,7 @@ public class UsageSimulator : IInteractable
 
             yield return new WaitForSeconds(0.75f);
         }
+
+        doorController.ToggleDoor();
     }
 }

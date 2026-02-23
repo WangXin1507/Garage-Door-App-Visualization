@@ -18,7 +18,7 @@ public class Node : MonoBehaviour
         origScale = transform.localScale;
         if (descrp) descrp.enabled = false;
 
-        XRSimpleInteractable xrInteract = GetComponent<XRSimpleInteractable>();
+        XRGrabInteractable xrInteract = GetComponent<XRGrabInteractable>();
         xrInteract.hoverEntered.AddListener(OnHoverEnter);
         xrInteract.hoverExited.AddListener(OnHoverExit);
     }
