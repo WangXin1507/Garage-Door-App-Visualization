@@ -10,7 +10,7 @@ public class CutConnection : MonoBehaviour
     void Update()
     {
         if (connectionRenderer == null || connectionRenderer.connections == null) return;
-        if (inputAction == null || !inputAction.action.IsPressed()) return;
+        //if (inputAction == null || !inputAction.action.IsPressed()) return;
 
         Vector3 c = transform.position;
 
