@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 public class InteractableNode : Node
 {
     [SerializeField] private InputActionReference inputAction;
-    [SerializeReference] private IInteractable interactable;
+    [SerializeField] private IInteractable interactable;
 
     protected override void Update()
     {
@@ -12,6 +12,7 @@ public class InteractableNode : Node
 
         if (hovered && inputAction != null && inputAction.action.WasPressedThisFrame())
         {
+            hovered = false;
             interactable?.Interact();
         }
     }    

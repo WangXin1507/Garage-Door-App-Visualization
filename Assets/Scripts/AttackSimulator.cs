@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class AttackSimulator : MonoBehaviour, IInteractable
+public class AttackSimulator : IInteractable
 {
     [SerializeField] RenderNodeConnection connectionRenderer;
 
@@ -15,7 +15,7 @@ public class AttackSimulator : MonoBehaviour, IInteractable
         }
     }
 
-    public void Interact()
+    public override void Interact()
     {
         if (connectionRenderer == null || 
             targetConnectionIndex > connectionRenderer.connections.Count) return;

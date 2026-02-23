@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public interface IInteractable
+public abstract class IInteractable : MonoBehaviour
 {
-    public void Interact();
+    public abstract void Interact();
 }
